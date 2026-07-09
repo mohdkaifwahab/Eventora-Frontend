@@ -10,6 +10,7 @@ node('slave1'){
     }
 
     stage('Build Container'){
+        sh 'sudo docker compose down'
         sh 'sudo docker compose up -d'
     }
     
