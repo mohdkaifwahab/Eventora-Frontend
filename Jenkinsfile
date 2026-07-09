@@ -1,3 +1,9 @@
+properties([
+    pipelineTriggers([
+        githubPush()
+    ])
+])
+
 node('slave1'){
     stage('Checkout ....'){
         checkout scm
